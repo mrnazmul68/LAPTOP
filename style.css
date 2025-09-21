@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*navbar*/
+#header {
+    color: rgb(51, 50, 50);
+}
+#header .nav-btn{
+    border: 1px solid white;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+   background-color: transparent;
+    padding: 5px;
+}
+#header #signupBtn{
+    margin-left: 60px;
+}
+
+
+#header .logo img {
+    height: 60px;
+}
+
+#header .logo {
+    display: flex;
+    align-items: center;
+}
+
+#header .logo h2 {
+    padding: 10px;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+
+#header .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    border: 1px solid;
+    width: 100%;
+    box-shadow: 5px 10px 20px rgb(46, 23, 23);
+    background-color: rgba(0, 0, 0, 0.473);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+#header ul {
+    display: flex;
+}
+
+#header ul li {
+    list-style: none;
+    padding: 10px;
+
+}
+
+#header ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+
+}
+
+#header ul li a:hover {
+    color: rgb(193, 0, 0);
+    transition: 0.4s;
+
+}
+
+
+/*Smooth scroll*/
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*nav active kore*/
+.nav ul li a.active {
+    background: rgb(32, 126, 137);
+    color: #ff0000;
+
+}
+
+
+/*homepage*/
+
+
+/*droping animation*/
+#home {
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+
+
+
+/* p er animation */
+#home p {
+    font-size: 32px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomFade 2s ease-out forwards;
+
+}
+
+@keyframes zoomFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+        color: #888;
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+        color: #ff6600;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        color: #ffffff;
+    }
+}
+
+#home .poem {
+    font-size: 15px;
+    color: aqua;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*donar section*/
+#donar .h2 h2 {
+    font-size: 35px;
+    width: 600px;
+    background-color: aquamarine;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    color: black;
+}
+
+#donar .h2 {
+    display: flex;
+    justify-content: center;
+
+}
+
+#donar {
+    height: auto;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#donar .find-donar h1 {
+    font-size: 30px;
+    width: 400px;
+    background-color: rgb(254, 254, 254);
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    color: black;
+    margin: 20px;
+
+}
+
+#donar .find-donar {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin-top: 50px;
+    border: 1px solid rgb(125, 116, 116);
+    border-radius: 30px;
+    width: 400px;
+    height: 70vh;
+    margin-bottom: 50px;
+}
+
+#donar .find-donar form {
+    margin-top: 30px;
+
+    width: 200px;
+
+}
+
+#donar .donar-search-button button {
+    padding: 10px 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 1px solid;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: aqua;
+}
+
+#donar .donar-search-button button:hover {
+    color: rgb(0, 251, 255);
+    background-color: black;
+}
+
+#donar #blood_group {
+    padding: 5px 20px;
+    margin-bottom: 20px;
+}
+
+#donar #upozilaSearch {
+    padding: 5px 20px;
+}
+
+/*donar cards*/
+.pro-conatainer {
+    display: flex;
+}
+
+.pro-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    margin: 10px;
+}
+
+#donar .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #c7c1c1;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 15px 0;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+#donar .pro:hover {
+    transform: translateY(-5px);
+}
+
+#donar .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#donar .des .inf {
+    font-size: 12px;
+    color: #414141;
+}
+
+#donar .des h4 {
+    color: rgb(0, 0, 0);
+}
+
+#donar .des h4 .info {
+    color: rgb(240, 3, 145);
+}
+
+#donar .des button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgb(174, 227, 227);
+    font-weight: bold;
+    border: 1px solid #3e3a3a;
+    transition: all 0.3s ease;
+}
+
+
+
+#donar .des button:hover {
+    background: black;
+    color: rgb(174, 227, 227);
+}
+
+.donor-card {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*donate korun*/
+#donate {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#donate .h2 h2 {
+    font-size: 35px;
+    width: 600px;
+    background-color: aquamarine;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    color: black;
+}
+
+#donate .h2 {
+    display: flex;
+    justify-content: center;
+
+}
+
+#donate .h2 {
+    display: flex;
+    justify-content: center;
+
+}
+
+#donate p {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+
+}
+
+
+
+.form-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin-bottom: 50px;
+
+}
+
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: crimson;
+}
+
+.form-container label {
+    display: block;
+    margin: 8px 0 4px;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: crimson;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: darkred;
+}
+
+
+/*about*/
+#matoma {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    color: white;
+}
+
+#matoma .h2 h2 {
+    font-size: 35px;
+    width: 600px;
+    background-color: aquamarine;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    color: black;
+}
+
+#matoma .h2 {
+    display: flex;
+    justify-content: center;
+
+}
+
+#matoma h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+#matoma p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fffbfb;
+    font-size: 20px;
+}
+
+
+
+.scroll-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: 220px;
+    /* adjust height */
+    display: flex;
+    align-items: center;
+}
+
+.scroll-container {
+    display: inline-flex;
+    animation: scroll 20s linear infinite;
+}
+
+.scroll-container img {
+    height: 200px;
+    /* fixed height */
+    margin-right: 15px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+
+}
+
+
+
+
+/*contact*/
+#contact {
+   background-color: black;
+    height: auto;
+    width: 100%;
+    color: white;
+ 
+}
+
+#contact .footer h2 {
+    font-size: 35px;
+    width: 600px;
+    background-color: aquamarine;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    color: black;
+}
+
+#contact .footer{
+    display: flex;
+   flex-direction: column;
+   
+    align-items: center;
+    
+
+}
+
+#contact .main-footer p {
+    font-size: 40px;
+    text-align: center;
+}
+
+#contact .contact-footer {
+    
+    margin: 50px 50px;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    padding-top: 20px;
+
+}
+
+#contact .contact-footer i {
+   color: rgb(18, 148, 163);
+   padding-top: 10px;
+   padding-bottom: 5px;
+   
+}
+#contact .contact-footer a{
+text-decoration: none;
+color: red;
+}
+
+#contact .phone p {
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+#contact .phone {
+    height: 160px;
+    width: 320px;
+    padding: 10px 12px;
+    border: 1px solid #c7c1c1;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    
+}
+
+#contact .footer .copyright p{
+    padding: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #e4e1e1;
+}

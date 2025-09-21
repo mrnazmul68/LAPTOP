@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মাতমা ব্লাড ডোনেশন</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="logo" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--header and nav section -->
+    <section id="header">
+        <div class="nav">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+                <h2>𝕸𝖆𝖙𝖔𝖒𝖆</h2>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#donar">Donar</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#matoma">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- Login/Signup buttons -->
+                <li><button id="signupBtn" class="nav-btn">Signup</button></li>
+                <li><button id="loginBtn" class="nav-btn">Login</button></li>
+                <!-- Profile dropdown (hidden initially) -->
+                <li id="profileMenu" style="display:none;">
+                    <a href="profile.html">
+                        <img id="navProfilePic" src="nazmul.jpg" alt="profile"
+                            style="width:28px;height:28px;border-radius:50%;vertical-align:middle;">
+                        <span style="margin-left:5px;">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!--home section-->
+    <section id="home" class="main-body">
+
+        <!--home section-->
+        <canvas id="canvas-club" style="height: 30vh; width: 100%;"></canvas>
+
+        <p>"এক ফোঁটা রক্ত দানে, জাগে জীবনের গান,</p>
+        <p>মানবতার সেবায় হোক সবার আহ্বান"</p>
+        <div class="poem">
+            "গাহি সাম্যের গান- <br>
+            মানুষের চেয়ে বড় কিছু নাই, নহে কিছু মহীয়ান! <br>
+            নাই দেশ-কাল-পাত্রের ভেদ, অভেদ ধর্ম জাতি,<br>
+            সব দেশে, সব কালে, ঘরে ঘরে তিনি মানুষের জ্ঞাতি।"</p>
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ডোনার -->
+    <section id="donar">
+        <div class="h2">
+            <h2>ডোনারের তথ্য</h2>
+        </div>
+
+        <div class="find-donar">
+
+            <h1>ডোনার খুঁজুন</h1>
+            <form id="searchForm">
+                <label>রক্তের গ্রুপ:</label><br>
+                <select id="blood_group">
+                    <option value="">-- সিলেক্ট করুন--</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select><br>
+
+                <label>উপজেলা:</label>
+                <select id="upozilaSearch" name="Upozila" required>
+                    <option value="">আপনার উপজেলা সিলেক্ট করুন...</option>
+                    <option value="কুমিল্লা আদর্শ সদর">কুমিল্লা আদর্শ সদর</option>
+                    <option value="কুমিল্লা সদর দক্ষিণ">কুমিল্লা সদর দক্ষিণ</option>
+                    <option value="দাউদকান্দি">দাউদকান্দি</option>
+                    <option value="দেবিদ্বার">দেবিদ্বার</option>
+                    <option value="বরুড়া">বরুড়া</option>
+                    <option value="চৌদ্দগ্রাম">চৌদ্দগ্রাম</option>
+                    <option value="হোমনা">হোমনা</option>
+                    <option value="মেঘনা">মেঘনা</option>
+                    <option value="মনোহরগঞ্জ">মনোহরগঞ্জ</option>
+                    <option value="মুরাদনগর">মুরাদনগর</option>
+                    <option value="নাঙ্গলকোট">নাঙ্গলকোট</option>
+                    <option value="তিতাস">তিতাস</option>
+                    <option value="লাকসাম">লাকসাম</option>
+                    <option value="লালমাই">লালমাই</option>
+                    <option value="বুড়িচং">বুড়িচং</option>
+                    <option value="ব্রাহ্মণপাড়া">ব্রাহ্মণপাড়া</option>
+                    <option value="মুরাদনগর">মুরাদনগর</option>
+                </select>
+
+                <div class="donar-search-button">
+                    <button type="submit">Search</button>
+                    <button type="button" id="resetBtn" class="btn-reset">Reset</button>
+                </div>
+            </form>
+
+        </div>
+
+
+
+
+        <!-- Donor cards -->
+        <div id="donorlist" class="pro-container">
+            <!--first card -->
+            <div class="pro" data-blood="O+" data-upojela="লাকসাম">
+                <img src="nazmul.jpg" alt="">
+                <div class="des">
+                    <span class="inf">Donar</span>
+                    <h4>Name: <span class="info">Nazmul Islam</span></h4>
+                    <h4>Blood: <span class="info">O+</span></h4>
+                    <h4><span class="info">20 years old</span></h4>
+                    <h4>Upozila: <span class="info">Laksham</span></h4>
+                    <h4>Address: <span class="info">Khila</span></h4>
+                    <h4>Number: <span class="info">0133*****52</span></h4>
+                    <a href="#"><button
+                            onclick="window.open('https://wa.me/8801712345678?text=Assalamu%20alaikum%2C%20ami%20aapnar%20donation%20niye%20book%20korte%20chai.')">Book
+                            Now</button></a>
+                </div>
+            </div>
+            <!--secoend card -->
+            <div class="pro" data-blood="O+" data-upojela="লাকসাম">
+                <img src="nazmul.jpg" alt="">
+                <div class="des">
+                    <span class="inf">Donar</span>
+                    <h4>Name: <span class="info">Nazmul Islam</span></h4>
+                    <h4>Blood: <span class="info">O+</span></h4>
+                    <h4> <span class="info">20 years old</span></h4>
+                    <h4>Upozila: <span class="info">Laksham</span></h4>
+                    <h4>Address: <span class="info">Khila</span></h4>
+                    <h4>Number: <span class="info">0133*****52</span></h4>
+
+
+                    <a href="#"><button
+                            onclick="window.open('https://wa.me/8801712345678?text=Assalamu%20alaikum%2C%20ami%20aapnar%20donation%20niye%20book%20korte%20chai.')">Book
+                            Now</button></a>
+                </div>
+            </div>
+            <!--third card -->
+            <div class="pro" data-blood="O+" data-upojela="লাকসাম">
+                <img src="nazmul.jpg" alt="">
+                <div class="des">
+                    <span class="inf">Donar</span>
+                    <h4>Name: <span class="info">Nazmul Islam</span></h4>
+                    <h4>Blood: <span class="info">O+</span></h4>
+                    <h4> <span class="info">20 years old</span></h4>
+                    <h4>Upozila: <span class="info">Laksham</span></h4>
+                    <h4>Address: <span class="info">Khila</span></h4>
+                    <h4>Number: <span class="info">0133*****52</span></h4>
+
+                    <a href="#"><button
+                            onclick="window.open('https://wa.me/8801712345678?text=Assalamu%20alaikum%2C%20ami%20aapnar%20donation%20niye%20book%20korte%20chai.')">Book
+                            Now</button></a>
+                </div>
+            </div>
+            <!--fourth card -->
+            <div class="pro" data-blood="O+" data-upojela="লাকসাম">
+                <img src="nazmul.jpg" alt="">
+                <div class="des">
+                    <span class="inf">Donar</span>
+                    <h4>Name: <span class="info">Nazmul Islam</span></h4>
+                    <h4>Blood: <span class="info">O+</span></h4>
+                    <h4> <span class="info">20 years old</span></h4>
+                    <h4>Upozila: <span class="info">Laksham</span></h4>
+                    <h4>Address: <span class="info">Khila</span></h4>
+                    <h4>Number: <span class="info">0133*****52</span></h4>
+                    <a href="#"><button
+                            onclick="window.open('https://wa.me/8801712345678?text=Assalamu%20alaikum%2C%20ami%20aapnar%20donation%20niye%20book%20korte%20chai.')">Book
+                            Now</button></a>
+                </div>
+            </div>
+
+            <!-- No results message -->
+            <div id="noResult"
+                style="text-align:center; margin-top:20px; display:none; color:rgb(255, 255, 255); font-weight:bold; font-size: 40px; padding-bottom: 40px;">
+                ❌ কোনো donor পাওয়া যায়নি
+            </div>
+    </section>
+
+
+
+
+        
+    <!-- ডোনেট -->
+    <section id="donate">
+
+        <div class="h2">
+            <h2>ডোনেট করুন</h2>
+        </div>
+        <p style="margin-top: 50px;">আপানার মূল্যবান রক্ত দিয়ে একটি জীবন </p>
+        <p style="margin-bottom: 50px;">বাঁচাতে আমাদের ফর্মটি পূরণ করুণ</p>
+        <div class="form-container">
+            <h2>Donor Registration</h2>
+            <form id="donarform">
+                <label>ছবি:</label>
+                <input type="file" id="photo" accept="image/*" required>
+
+                <label>রক্তের গ্রুপ:</label>
+                <select id="bloodGroup" required>
+                    <option value="">ব্লাড গ্রুপ সিলেক্ট করুন...</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                </select>
+
+                <label>নামঃ</label>
+                <input type="text" id="name" placeholder="আপনার নাম লিখুন..." required>
+
+                <label>উপজেলাঃ</label>
+                <select id="upozilaReg" required>
+                    <option value="">আপনার উপজেলা সিলেক্ট করুন...</option>
+                    <option value="কুমিল্লা আদর্শ সদর">কুমিল্লা আদর্শ সদর</option>
+                    <option value="কুমিল্লা সদর দক্ষিণ">কুমিল্লা সদর দক্ষিণ</option>
+                    <option value="দাউদকান্দি">দাউদকান্দি</option>
+                    <option value="দেবিদ্বার">দেবিদ্বার</option>
+                    <option value="বরুড়া">বরুড়া</option>
+                    <option value="চৌদ্দগ্রাম">চৌদ্দগ্রাম</option>
+                    <option value="হোমনা">হোমনা</option>
+                    <option value="মেঘনা">মেঘনা</option>
+                    <option value="মনোহরগঞ্জ">মনোহরগঞ্জ</option>
+                    <option value="মুরাদনগর">মুরাদনগর</option>
+                    <option value="নাঙ্গলকোট">নাঙ্গলকোট</option>
+                    <option value="তিতাস">তিতাস</option>
+                    <option value="লাকসাম">লাকসাম</option>
+                    <option value="লালমাই">লালমাই</option>
+                    <option value="বুড়িচং">বুড়িচং</option>
+                    <option value="ব্রাহ্মণপাড়া">ব্রাহ্মণপাড়া</option>
+                    <option value="মুরাদনগর">মুরাদনগর</option>
+                </select>
+
+                <label>বয়সঃ</label>
+                <input type="number" id="age" required min="18" placeholder="আপনার বয়স লিখুন..." max="65">
+
+
+                <label>মোবাইলঃ</label>
+                <input type="text" id="mobile" placeholder="আপনার মোবাইল নাম্বার লিখুন..." required>
+
+                <label>ইমেইলঃ</label>
+                <input type="email" id="email" placeholder="আপনার ইমেইল লিখুন..." required>
+
+                <label>পাসওয়ার্ডঃ</label>
+                <input type="password" id="password" placeholder="পাসওয়ার্ড লিখুন..." required>
+
+
+                <button type="submit">রেজিস্টার করুন</button>
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!-- মাতমা -->
+    <section id="matoma">
+        <div class="h2">
+            <h2>আমাদের সম্পর্কে</h2>
+        </div>
+        <h4>মানুষ মানুষের জন্য, জীবন জীবনের জন্য</h4>
+        <p>আমরা মানব সেবায় কাজ করি, আমরা মানুষের জন্য কাজ করি, আমরা এই কাজকে ভালোবাসি। রক্ত দান, পথ-শিশুদের পাঠদান,</p>
+        <p>অসহায় মানুষদের সাহায্য, তৃতীয় লিঙ্গের মানুষের সাহায্য, ত্রিশ রোজায় পথচারীদের ইফতার করানো সহ নানা সামাজিক </p>
+        <p>কাজে আমাদের এই সংগঠন নিয়োজিত</p>
+
+        <div class="scroll-wrapper">
+            <div class="scroll-container">
+                <img src="w1.jpg" alt="">
+                <img src="w2.jpg" alt="">
+                <img src="w3 (2).jpg" alt="">
+                <img src="w4 (2).jpg" alt="">
+                <img src="w5.jpg" alt="">
+                <img src="w6.jpg" alt="">
+                <img src="w7.jpg" alt="">
+                <img src="w8.jpg" alt="">
+                <img src="nazmul.jpg" alt="">
+                <img src="w9.jpg" alt="">
+
+                <!-- repeat images for seamless loop -->
+                <img src="w1.jpg" alt="">
+                <img src="w2.jpg" alt="">
+                <img src="w3 (2).jpg" alt="">
+                <img src="w4 (2).jpg" alt="">
+                <img src="w5.jpg" alt="">
+                <img src="w6.jpg" alt="">
+                <img src="w7.jpg" alt="">
+                <img src="w8.jpg" alt="">
+                <img src="nazmul.jpg" alt="">
+                <img src="w9.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- কন্টাক্ট -->
+    <section id="contact">
+        <div class="footer">
+            <h2>যোগাযোগ করুন</h2>
+            <div class="main-footer">
+                <p style="margin-top: 50px;">আমাদের সাথে সরাসরি যোগাযোগ করতে </p>
+                <p>নিচের প্লাটফর্ম গুলো ব্যাবহার করুন</p>
+            </div>
+
+            <div class="contact-footer">
+                <div class="phone">
+                    <i class="fa-solid fa-phone fa-2x"></i>
+                    <p id="mobile">মোবাইলঃ<a href=""> 013******52</a></p>
+                    <p id="mobile-2">যেকোন প্রয়োজনে কল করুণ</p>
+                </div>
+
+                <div class="phone">
+                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                    <p id="mobile">ইমেইলঃ <a href="">mr*******8@gmail.com</a></p>
+                    <p id="mobile-2">যেকোন প্রয়োজনে ইমেইল করুণ</p>
+                </div>
+
+                <div class="phone">
+                    <a href="https://www.facebook.com/groups/206655876614747"> <i class="fa fa-facebook fa-2x"
+                            aria-hidden="true"></i></a>
+
+                    <p id="mobile-2">আমাদের পাবলিক ফেসবুক পেইজ</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Designed and Developed by Nazmul Islam-2025</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- JS ফাইল লোড -->
+    <script src="script.js"></script>
+</body>
+
+</html>

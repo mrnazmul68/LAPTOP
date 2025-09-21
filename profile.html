@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মাতমা ব্লাড ডোনেশন</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="logo" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    body {
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      position: relative;
+    }
+    /* Dark mode main */
+    body.dark {
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #ddd;
+    }
+    body.dark .container {
+      background: #1f2937;
+      color: #eee;
+    }
+    body.dark .profile-view {
+      background: #111827;
+    }
+    body.dark .profile-edit {
+      background: #1f2937;
+    }
+    body.dark input, 
+    body.dark select {
+      background: #374151;
+      color: #eee;
+      border: 1px solid #555;
+    }
+
+    /* Profile View */
+    .profile-view {
+      padding: 30px;
+      text-align: center;
+      background: #f4f6fb;
+    }
+    .profile-view img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #007BFF;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .profile-view h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .profile-view h4 {
+      font-size: 16px;
+      margin: 6px 0;
+      color: #555;
+    }
+    body.dark .profile-view h2,
+    body.dark .profile-view h4 {
+      color: #eee;
+    }
+
+    /* Profile Edit */
+    .profile-edit {
+      padding: 30px;
+      background: #fff;
+    }
+    .profile-edit h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #007BFF;
+    }
+    .profile-edit label {
+      font-size: 14px;
+      color: #333;
+      display: block;
+      margin: 8px 0 4px;
+    }
+    body.dark .profile-edit label {
+      color: #ddd;
+    }
+    .profile-edit input, 
+    .profile-edit select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    .profile-edit input[type="file"] {
+      border: none;
+    }
+    .profile-edit button {
+      background: #007BFF;
+      color: #fff;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 8px;
+      transition: 0.3s;
+    }
+    .profile-edit button:hover {
+      background: #0056b3;
+    }
+    .logout-btn {
+      background: #dc3545 !important;
+    }
+    .logout-btn:hover {
+      background: #b02a37 !important;
+    }
+
+    /* Dark Mode Toggle Button */
+    .toggle-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      padding: 8px 14px;
+      font-size: 14px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .toggle-btn:hover {
+      background: #0056b3;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .profile-view {
+        border-bottom: 2px solid #eee;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Dark Mode Toggle -->
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+    <!-- Profile View -->
+    <div class="profile-view">
+      <img id="profilePic" src="nazmul.jpg" alt="Profile Picture">
+      <h2 id="profileName">Nazmul Islam</h2>
+      <h4>Blood: <span id="profileBlood">O+</span></h4>
+      <h4><span id="profileAge">20</span> years old</h4>
+      <h4>Upozila: <span id="profileUpazila">Laksham</span></h4>
+      <h4>Address: <span id="profileAddress">Khila</span></h4>
+      <h4>Number: <span id="profilePhone">0133*****52</span></h4>
+    </div>
+
+    <!-- Profile Edit -->
+    <div class="profile-edit">
+      <h3>Edit Profile</h3>
+      <form id="editForm">
+        <label>Name</label>
+        <input type="text" id="nameInput" value="Nazmul Islam">
+        
+        <label>Blood Group</label>
+        <select id="bloodInput">
+          <option>O+</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+          <option>O-</option>
+        </select>
+        
+        <label>Age</label>
+        <input type="number" id="ageInput" value="20">
+        
+        <label>Upozila</label>
+        <input type="text" id="upazilaInput" value="Laksham">
+        
+        <label>Address</label>
+        <input type="text" id="addressInput" value="Khila">
+        
+        <label>Phone</label>
+        <input type="text" id="phoneInput" value="0133*****52">
+
+        <label>Profile Picture</label>
+        <input type="file" id="picInput" accept="image/*">
+
+        <button type="button" onclick="updateProfile()">Update Profile</button>
+        <button type="button" class="logout-btn">Logout</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Live update profile
+    function updateProfile() {
+      document.getElementById("profileName").innerText = document.getElementById("nameInput").value;
+      document.getElementById("profileBlood").innerText = document.getElementById("bloodInput").value;
+      document.getElementById("profileAge").innerText = document.getElementById("ageInput").value;
+      document.getElementById("profileUpazila").innerText = document.getElementById("upazilaInput").value;
+      document.getElementById("profileAddress").innerText = document.getElementById("addressInput").value;
+      document.getElementById("profilePhone").innerText = document.getElementById("phoneInput").value;
+
+      // Update picture if selected
+      const picInput = document.getElementById("picInput");
+      if (picInput.files && picInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById("profilePic").src = e.target.result;
+        }
+        reader.readAsDataURL(picInput.files[0]);
+      }
+    }
+
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+      const btn = document.querySelector(".toggle-btn");
+      if (document.body.classList.contains("dark")) {
+        btn.innerText = "☀️ Light Mode";
+      } else {
+        btn.innerText = "🌙 Dark Mode";
+      }
+    }
+  </script>
+</body>
+</html>
